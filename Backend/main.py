@@ -118,3 +118,7 @@ def eliminar_concierto(concert_id: int):
         raise HTTPException(status_code=404, detail="Concierto no encontrado")
     concerts_db.delete_concert(concert_id)
     return {"mensaje": "Concierto eliminado correctamente"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "message": "API funcionando normal"}
