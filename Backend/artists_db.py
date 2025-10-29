@@ -6,27 +6,6 @@ DB_NAME = "backend.db"
 
 db_lock = Lock()
 
-def initialize_db():
-    """
-    Function to initialize database
-    - If created, do nothing
-    - Else, create table
-    """
-    is_new = not os.path.exists(DB_NAME)
-
-    with sqlite3.connect(DB_NAME) as conn:
-        conn.execute("PRAGMA journal_mode=WAL")
-        if is_new:
-            conn.execute("""
-                CREATE TABLE artists (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    name TEXT NOT NULL,
-                    top INTEGER NOT NULL,
-                    reproductions INTEGER NOT NULL         
-                )
-            """)
-            conn.commit()
-
 def create_artist(name:str, top: int, reproductions:int):
     """
     Function to create an artists
