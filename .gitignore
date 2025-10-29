@@ -1,0 +1,23 @@
+fastapi/
+
+# Archivos de bases de datos
+*.db
+*.sqlite3
+
+# Archivos compilados de python
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de logs o temporales
+*.log
+*.temp
+*.bak
+
+# Configuración del sistema o IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Cache de FastAPI o uvicorn
+*.pid
