@@ -5,10 +5,10 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
 
 ## Autores
 
-Abraham Martínez Cerón
-Giuseppe Valencia Carrillo 
-Diego Azahed Adabache Gutiérrez
-Diego Martinez Tinoco - 202501
+Abraham Martínez Cerón  
+Giuseppe Valencia Carrillo  
+Diego Azahed Adabache Gutiérrez  
+Diego Martinez Tinoco  
 
 
 ## Backend
@@ -17,18 +17,23 @@ La estructura de los archivos es la siguiente
 ```
 PROYECTO1DW/
 ├── Backend/
-│   ├── artists_db.py  # Gestión de la base de datos de artistas
-│   ├── concerts_db.py # Gestión de la base de datos de conciertos
+│   ├── artists_db.py  # Gestión de la tabla de artistas
+│   ├── backend_db.py  # Gestión de la base de datos 
+│   ├── concerts_db.py # Gestión de la tabla de conciertos
 │   ├── main.py        # Orquestador de la API 
 ```
 
 ### Archivo artists_db.py
 
-Se encarga de crear la tabla de la BD para los artistas. Contiene un ID que autoincrementa, nombre, top y reproducciones. Además, sigue los principios CRUD: Create, Read, Update and Delete. Soporta concurrencia bloqueando la base de datos para operaciones de creación, actualización y eliminación
+Contiene un ID que autoincrementa, nombre, top y reproducciones. Además, sigue los principios CRUD: Create, Read, Update and Delete. Soporta concurrencia bloqueando la base de datos para operaciones de creación, actualización y eliminación
+
+### Archivo backend_db.py
+
+Se encarga de crear la base de datos con las tablas artists y concerts. En caso de que ya existan, se omite la inicialización. Además, los cambios son persistentes con journal_mode=WAL
 
 ### Archivo concerts_db.py
 
-Se encarga de crear la tabla de la BD para los conciertos. Contiene un ID que autoincrementa, asistencia, ciudad, fecha y el ID del artista como llave foránea. Sigue los principios CRUD: Create, Read, Update and Delete. Soporta concurrencia bloqueando la base de datos para operaciones de creación, actualización y eliminación. 
+Contiene un ID que autoincrementa, asistencia, ciudad, fecha y el ID del artista como llave foránea. Sigue los principios CRUD: Create, Read, Update and Delete. Soporta concurrencia bloqueando la base de datos para operaciones de creación, actualización y eliminación. 
 
 ### Archivo main.py
 
