@@ -1,16 +1,25 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import artists_db
 import concerts_db
+import backend_db
 
 #Inicializar base de datos
-artists_db.initialize_db()
-concerts_db.initialize_db()
+backend_db.initialize_db()
 
 app = FastAPI(
     title="Plataforma de Managers de Música",
     description="API para gestión de artistas y conciertos",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # -----------------------
