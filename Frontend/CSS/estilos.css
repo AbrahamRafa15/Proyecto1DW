@@ -1,0 +1,6 @@
+[data-bs-theme="dark"] {
+    --bs-body-bg: #7a1717; 
+    --bs-body-color: #d7d1d1; 
+    --bs-tertiary-bg: #2e231f;
+    --bs-border-color: #adabab;
+}
