@@ -1,9 +1,9 @@
 const THEME_KEY = 'bs-theme'; 
 const htmlElement = document.documentElement;
 
-/**
- * Carga el tema guardado en localStorage al iniciar la página.
- */
+
+// Carga el tema guardado en localStorage al iniciar la página.
+ 
 function loadTheme() {
     const savedTheme = localStorage.getItem(THEME_KEY);
     if (savedTheme) {
@@ -11,9 +11,9 @@ function loadTheme() {
     }
 }
 
-/**
- * Alterna el tema entre 'light' y 'dark' y lo guarda en localStorage.
- */
+
+//  Alterna el tema entre 'light' y 'dark' y lo guarda en localStorage.
+ 
 function toggleDarkMode() {
     const currentTheme = htmlElement.getAttribute('data-bs-theme');
     let newTheme;
@@ -27,6 +27,4 @@ function toggleDarkMode() {
     
     localStorage.setItem(THEME_KEY, newTheme);
 }
-
-// Ejecuta la función de carga al iniciar
 loadTheme();
