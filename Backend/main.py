@@ -87,6 +87,7 @@ def listar_conciertos(limit: int=20, offset: int=0):
         {
             "id": c[0],
             "city": c[1],
+            "date": c[2],
             "attendance": c[3],
             "artist_name": c[4]
         }
