@@ -21,17 +21,17 @@ def create_concert(attendance: int, city: str, date: str, id_artist: int):
             )
             conn.commit()
 
-def get_concert(limit:int=20, offset:int=20):
-    """Function that returns a list of concerts"""
+def get_concert(limit: int = 20, offset: int = 0):
+    """Function that returns a list of concerts with pagination"""
     with sqlite3.connect(DB_NAME) as conn:
         cur = conn.cursor()
         cur.execute("""
             SELECT concerts.id, concerts.city, concerts.date, concerts.attendance, artists.name
             FROM concerts
             JOIN artists ON concerts.id_artist = artists.id
-            WHERE concerts.id = ?
-        """, (limit, offset)
-        )
+            ORDER BY concerts.id
+            LIMIT ? OFFSET ?
+        """, (limit, offset))
         return cur.fetchall()
 
 def get_concert_by_id(concert_id:int):
