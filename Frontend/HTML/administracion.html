@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Administración</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container py-4">
+        <h1 class="mb-4">Administración de artistas y conciertos</h1>
+        <div class="mb-5">
+            <h2 class="mb-3">Artistas</h2>
+            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalCrearArtista">Crear artista</button>
+            <table class="table table-striped" id="tablaArtistas">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Top</th>
+                        <th>Reproducciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Artistas se cargarán aquí -->
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h2 class="mb-3">Conciertos</h2>
+            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalCrearConcierto">Crear concierto</button>
+            <table class="table table-striped" id="tablaConciertos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Artista</th>
+                        <th>Fecha</th>
+                        <th>Lugar</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Conciertos se cargarán aquí -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Crear Artista -->
+    <div class="modal fade" id="modalCrearArtista" tabindex="-1" aria-labelledby="modalCrearArtistaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="formCrearArtista" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCrearArtistaLabel">Crear Artista</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="nombreArtista" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombreArtista" name="nombre" required />
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="topArtista" class="form-label">Top</label>
+                    <input type="number" class="form-control" id="topArtista" name="top" required />
+                    </div>
+                <div class="mb-3">
+                    <label for="reproduccionesArtista" class="form-label">Reproducciones</label>
+                    <input type="number" class="form-control" id="reproduccionesArtista" name="reproductions" required />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Crear</button>
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Actualizar Artista -->
+    <div class="modal fade" id="modalActualizarArtista" tabindex="-1" aria-labelledby="modalActualizarArtistaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="formActualizarArtista" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalActualizarArtistaLabel">Actualizar Artista</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="idArtistaActualizar" name="id" />
+                        <div class="mb-3">
+                            <label for="nombreArtistaActualizar" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombreArtistaActualizar" name="nombre" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="topArtistaActualizar" class="form-label">Top</label>
+                            <input type="number" class="form-control" id="topArtistaActualizar" name="top" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="reproduccionesArtistaActualizar" class="form-label">Reproducciones</label>
+                            <input type="number" class="form-control" id="reproduccionesArtistaActualizar" name="reproductions" required />
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Crear Concierto -->
+    <div class="modal fade" id="modalCrearConcierto" tabindex="-1" aria-labelledby="modalCrearConciertoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="formCrearConcierto" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCrearConciertoLabel">Crear Concierto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="crearConciertoIdArtist" class="form-label">Artista</label>
+                    <select class="form-select" id="crearConciertoIdArtist" name="id_artist" required></select>
+                </div>
+                <div class="mb-3">
+                    <label for="crearConciertoAttendance" class="form-label">Asistencia</label>
+                    <input type="number" class="form-control" id="crearConciertoAttendance" name="attendance" required />
+                </div>
+                <div class="mb-3">
+                    <label for="crearConciertoCity" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="crearConciertoCity" name="city" required />
+                </div>
+                <div class="mb-3">
+                    <label for="crearConciertoDate" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="crearConciertoDate" name="date" required />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Crear</button>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Actualizar Concierto -->
+    <div class="modal fade" id="modalActualizarConcierto" tabindex="-1" aria-labelledby="modalActualizarConciertoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="formActualizarConcierto" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalActualizarConciertoLabel">Actualizar Concierto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="idConciertoActualizar" name="id" />
+                    <div class="mb-3">
+                        <label for="actualizarConciertoArtistId" class="form-label">Artista</label>
+                        <select class="form-select" id="actualizarConciertoArtistId" name="id_artist" required></select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="actualizarConciertoAttendance" class="form-label">Asistencia</label>
+                        <input type="number" class="form-control" id="actualizarConciertoAttendance" name="attendance" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="actualizarConciertoCity" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="actualizarConciertoCity" name="city" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="actualizarConciertoDate" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="actualizarConciertoDate" name="date" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../JS/administracion.js"></script>
+</body>
+</html>
