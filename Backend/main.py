@@ -79,6 +79,7 @@ def eliminar_artista(artist_id: int):
 # -----------------------
 # ENDPOINTS DE CONCIERTOS
 # -----------------------
+
 @app.get("/conciertos")
 def listar_conciertos(limit: int=20, offset: int=0):
     conciertos_raw = concerts_db.get_concert(limit=limit, offset=offset)
@@ -86,12 +87,14 @@ def listar_conciertos(limit: int=20, offset: int=0):
         {
             "id": c[0],
             "city": c[1],
+            "date": c[2],
             "attendance": c[3],
             "artist_name": c[4]
         }
         for c in conciertos_raw
     ]
     return {"conciertos": conciertos, "count":len(conciertos)}
+
 
 @app.get("/conciertos/{concert_id}")
 def obtener_concierto(concert_id:int):
