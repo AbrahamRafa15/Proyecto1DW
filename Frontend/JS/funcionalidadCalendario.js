@@ -31,7 +31,16 @@ async function fetchConcerts() {
         const res = await fetch(`${API_URL}/conciertos`);
         if (!res.ok) throw new Error("Error al obtener conciertos");
         const json = await res.json();
-        const data = Array.isArray(json) ? json : (json.conciertos || []);
+        let data = Array.isArray(json) ? json : (json.conciertos || []);
+
+        data = data.map(c =>{
+            if(!c.id_artist && c.artist_name){
+                const match = artists.find(a => a.name === c.artist_name);
+                if (match) c.id_artist = match.id;
+            }
+            return c;
+        });
+
         localStorage.setItem(key, JSON.stringify(data));
         console.log("Conciertos cargados desde API y guardados en localStorage");
         return data;
@@ -76,9 +85,9 @@ function mapConcertsToEvents(concertList, selectedArtistId = "all") {
         // duración por defecto 2h si no hay hora-fin
         const end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
 
-        // Encontrar nombre de artista 
-        const a = artists.find(x => String(x.id) === String(c.id_artist));
-        const artistName = a ? a.name : `Artista #${c.id_artist}`;
+        const artistName = c.artist_name
+                ?? (artists.find(x => String(x.id) === String(c.id_artist))?.name)
+                ?? `Artista #${c.id_artist ?? "?"}`;
 
         return {
             from: start,
