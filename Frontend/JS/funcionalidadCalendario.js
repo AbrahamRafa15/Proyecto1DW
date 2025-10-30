@@ -8,17 +8,41 @@ let artists = [];         // { id, name, ... }
 let concerts = [];        // { id, attendance, city, date, id_artist, ... }
 
 async function fetchArtists() {
-    const res = await fetch(`${API_URL}/artistas`);
-    const json = await res.json();
-
-    return Array.isArray(json) ? json : (json.artistas || []);
+    const key = "mm_artistas";
+    try {
+        const res = await fetch(`${API_URL}/artistas`);
+        if (!res.ok) throw new Error("Error al obtener artistas");
+        const json = await res.json();
+        const data = Array.isArray(json) ? json : (json.artistas || []);
+        localStorage.setItem(key, JSON.stringify(data));
+        console.log("Artistas cargados desde API y guardados en localStorage");
+        return data;
+    }
+    catch (err) {
+        console.warn("Fallo al obtener artistas. Usando localStorage...", err);
+        const cached = localStorage.getItem(key);
+        return cached ? JSON.parse(cached) : [];
+    }
 }
 
 async function fetchConcerts() {
-    const res = await fetch(`${API_URL}/conciertos`);
-    const json = await res.json();
-    return Array.isArray(json) ? json : (json.conciertos || []);
+    const key = "mm_conciertos";
+    try {
+        const res = await fetch(`${API_URL}/conciertos`);
+        if (!res.ok) throw new Error("Error al obtener conciertos");
+        const json = await res.json();
+        const data = Array.isArray(json) ? json : (json.conciertos || []);
+        localStorage.setItem(key, JSON.stringify(data));
+        console.log("Conciertos cargados desde API y guardados en localStorage");
+        return data;
+    }
+    catch(err) {
+        console.warn("Fallo al obtener conciertos. Usando localStorage...", err);
+        const cached = localStorage.getItem(key);
+        return cached ? JSON.parse(cached) : [];
+    }
 }
+     
 
 // ====== Calendar.js ======
 function ensureCalendar() {
