@@ -10,32 +10,23 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../CSS/estilos.css" />
   </head>
   <body>
     <header>
       <!-- Componente de Barra de navegación -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Music Manager</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <!-- Añadir las ligas a las páginas web adicionales -->
-              <a class="nav-link active" aria-current="page" href="#">Conciertos</a>
-              <a class="nav-link" href="HTML/estadisticas.html">Fechas</a>
-              <a class="nav-link" href="#">Artistas</a>
-            </div>
-          </div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+        <div class="container">
+          <a class="navbar-brand fw-semibold" href="index.html">Music Manager</a>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/Frontend/index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/Frontend/HTML/calendario.html">Fechas</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Frontend/HTML/estadisticas.html">Estadísticas</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Frontend/HTML/administracion.html">Administración</a></li>
+            <li class="nav-item ms-3">
+                <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Cambiar Tema</button>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -153,5 +144,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="../JS/tema.js"></script>
   </body>
 </html>
