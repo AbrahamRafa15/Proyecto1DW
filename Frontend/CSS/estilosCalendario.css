@@ -1,0 +1,69 @@
+
+:root{
+    --mm-primary: #0d6efd;       
+    --mm-text:    #212529;
+    --mm-muted:   #6c757d;
+}
+
+
+.hero-strip{
+    background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35)),
+    url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimgs.6sqft.com%2Fwp-content%2Fuploads%2F2021%2F07%2F13123945%2FThe-Rooftop-at-Pier-17-concert.jpg&f=1&nofb=1&ipt=5855718f40c16091fe58b00d15b81cc39b1aab14e26c726262a2e471ba70e4a2") center/cover no-repeat;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+/* Dropdown */
+#artistFilter{
+        min-width: 220px;
+}
+
+#calendar{
+}
+
+.calendar,
+.calendar .calendar-body,
+.calendar .calendar-title-bar,
+.calendar .months-list,
+.calendar .days-list,
+.calendar .weeks{
+border-radius: .75rem !important;
+}
+
+.calendar .calendar-title-bar{
+    background: #ffffff !important;
+    border: 1px solid rgba(0,0,0,.06) !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04) !important;
+    color: var(--mm-text) !important;
+}
+
+
+.calendar .calendar-title-bar .title,
+.calendar .calendar-title-bar .button{
+    font-weight: 600 !important;
+}
+.calendar .button{
+    border-radius: .5rem !important;
+}
+
+.calendar .day{
+    transition: background-color .15s ease;
+}
+.calendar .day:hover{
+  background-color: rgba(13,110,253,.06) !important;
+}
+
+.calendar .event{
+    border-radius: .5rem !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,.08) !important;
+}
+
+
+body{
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+
+@media (max-width: 576px){
+    .hero-strip{ padding: 18px 0; }
+}
