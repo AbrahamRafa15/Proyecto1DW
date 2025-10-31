@@ -67,16 +67,16 @@ async function fetchArtists() {
     }
 }
 
-async function fetchConcerts() {
+async function fetchConcerts(artistsList = []) {
     const key = "mm_conciertos";
     try {
         const json = await fetchJsonWithStatus(`${API_URL}/conciertos`);
         let data = Array.isArray(json) ? json : (json.conciertos || []);
 
-        // Resolver id_artist si solo viene artist_name
+        // Completa id_artist si solo llega artist_name
         data = data.map(c => {
             if (!c.id_artist && c.artist_name) {
-                const match = artists.find(a => a.name === c.artist_name);
+                const match = artistsList.find(a => a.name === c.artist_name);
                 if (match) c.id_artist = match.id;
             }
             return c;
@@ -180,9 +180,16 @@ function populateArtistDropdown() {
 
 (async function init() {
     try {
-        [artists, concerts] = await Promise.all([fetchArtists(), fetchConcerts()]);
+        // 1) Artistas
+        artists = await fetchArtists();
+
+        // 2) Conciertos
+        concerts = await fetchConcerts(artists);
+
+        // 3) UI
         populateArtistDropdown();
 
+        // 4) Render inicial
         const selected = localStorage.getItem(STORAGE_KEY_SELECTED) || "all";
         renderCalendar(selected);
 
