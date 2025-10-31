@@ -14,7 +14,6 @@ async function fetchJson(url) {
 // Función principal
 async function cargarDatos(tipo) {
     let data = [];
-
     try {
         console.log("Intentando cargar datos desde la API...");
         const endpoint = tipo === "popularidad" ? "/artistas" : "/conciertos";
