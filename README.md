@@ -13,7 +13,7 @@ Diego Martinez Tinoco
 
 ## Backend
 
-La estructura de los archivos es la siguiente
+La estructura de los archivos es la siguiente:
 ```
 PROYECTO1DW/
 ├── Backend/
@@ -108,3 +108,24 @@ O desde la terminal con `curl`:
 ```bash
 curl http://127.0.0.1:8000/health
 ```
+
+### Front End 
+La estructura de los archivos es la siguiente:
+```
+Proyecto1DW/
+├── Frontend/
+│   ├── CSS/
+│   │   ├── estilos.css
+│   │   └── estilosCalendario.css
+│   ├── HTML/
+│   │   ├── administracion.html
+│   │   ├── calendario.html
+│   │   ├── estadisticas.html
+│   │   └── index.html
+│   ├── JS/
+│   │   ├── administracion.js
+│   │   ├── estadisticas.js
+│   │   ├── funcionalidadCalendario.js
+│   │   └── tema.js
+```
+
