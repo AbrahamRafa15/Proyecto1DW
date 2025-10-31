@@ -20,8 +20,16 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
     Roles: Frontend, index.js, index.html, administracion.html, calendario.html, estadisticas.html
   </div>
 </div>
+
+<div style="display: flex; align-items: center;">
+  <img src="/Imagenes/diegoAda.jpg" alt="Diego Adabache" width="80" style="margin-right: 10px;"/>
+  <div>
+    <strong>Diego Azahed Adabache Gutiérrez  </strong><br/>
+    Roles: Frontend, tema.js, estilos.css, html en general.
+  </div>
+</div>
  
-Diego Azahed Adabache Gutiérrez  
+ 
 Diego Martinez Tinoco  
 
 ## Front End 
