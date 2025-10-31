@@ -14,7 +14,7 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
 </div>
 
 <div style="display: flex; align-items: center;">
-  <img src="" alt="Giuseppe Valencia Carrillo" width="80" style="margin-right: 10px;"/>
+  <img src="/Imagenes/GiuseppeValencia.png" alt="Giuseppe Valencia Carrillo" width="80" style="margin-right: 10px;"/>
   <div>
     <strong>Giuseppe Valencia Carrillo </strong><br/>
     Roles: Frontend, index.js, index.html, administracion.html, calendario.html, estadisticas.html
