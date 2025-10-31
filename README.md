@@ -12,8 +12,24 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
     Roles: Backend, administracion.html, estadisticas.html, administracion.js, estadisticas.js, requirements.txt y gitignore. Documentación de Backend.
   </div>
 </div>
-Giuseppe Valencia Carrillo  
-Diego Azahed Adabache Gutiérrez  
+
+<div style="display: flex; align-items: center;">
+  <img src="/Imagenes/GiuseppeValencia.jpg" alt="Giuseppe Valencia Carrillo" width="80" style="margin-right: 10px;"/>
+  <div>
+    <strong>Giuseppe Valencia Carrillo </strong><br/>
+    Roles: Frontend, index.js, index.html, administracion.html, calendario.html, estadisticas.html
+  </div>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="/Imagenes/diegoAda.jpg" alt="Diego Adabache" width="80" style="margin-right: 10px;"/>
+  <div>
+    <strong>Diego Azahed Adabache Gutiérrez  </strong><br/>
+    Roles: Frontend, tema.js, estilos.css, html en general.
+  </div>
+</div>
+ 
+ 
 Diego Martinez Tinoco  
 
 ## Front End 
@@ -37,7 +53,7 @@ Proyecto1DW/
 ```
 
 ### Archivos de HTML
-**Index.html** es la página principal de la página. En esta se encuentra en forma de base de datos todos los artistas que se manejan en la página. Se muestra una foto del artista, una descripción con la información destacada del artista y las próximas fechas en las que se presentará el artista. 
+**Index.html** es la página principal de la página. En esta se encuentra en forma de base de datos todos los artistas que se manejan en la página. Se muestra una descripción con la información destacada del artista.
 
 **estadisticas.html** es una página en la que, a través de la API, forma gráficos en los que se refleja popularidad (en forma de reproducciones) y otro gráfico que mide asistencia a conciertos.
 
@@ -62,10 +78,13 @@ Proyecto1DW/
 
 **tema.js** es un documento donde se almacena el método para poder cambiar al modo oscuro o modo claro, guardando las preferencias en LocalStorage.
 
+**index.js** es un documento que se conecta con la API y obtiene la información de los artistas registrados y los despliega en tarjetas de bootstrap haciendo uso del DOM. 
+
 ### Levantar el Front End
 
 Las 4 páginas con las que trabajamos fueron lanzadas por medio de Github Pages. Una vez listas en el main de nuestro repositorio, fueron desplegadas. 
 
+https://abrahamrafa15.github.io/Proyecto1DW/
 
 ## Backend
 
