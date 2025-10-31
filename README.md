@@ -10,6 +10,56 @@ Giuseppe Valencia Carrillo
 Diego Azahed Adabache Gutiérrez  
 Diego Martinez Tinoco  
 
+## Front End 
+La estructura de los archivos es la siguiente:
+```
+Proyecto1DW/
+├── Frontend/
+│   ├── CSS/
+│   │   ├── estilos.css
+│   │   └── estilosCalendario.css
+│   ├── HTML/
+│   │   ├── administracion.html
+│   │   ├── calendario.html
+│   │   ├── estadisticas.html
+│   │   └── index.html
+│   ├── JS/
+│   │   ├── administracion.js
+│   │   ├── estadisticas.js
+│   │   ├── funcionalidadCalendario.js
+│   │   └── tema.js
+```
+
+### Archivos de HTML
+**Index.html** es la página principal de la página. En esta se encuentra en forma de base de datos todos los artistas que se manejan en la página. Se muestra una foto del artista, una descripción con la información destacada del artista y las próximas fechas en las que se presentará el artista. 
+
+**estadisticas.html** es una página en la que, a través de la API, forma gráficos en los que se refleja popularidad (en forma de reproducciones) y otro gráfico que mide asistencia a conciertos.
+
+**calendario.html** es una página donde se almacenan las fechas de los conciertos de todos los artistas o individualmente. A través de la API se recibe la información y se almacena dentro de el calendario que está en la página.
+
+**administracion.html** es una página que sirve para agregar artistas a la base de datos de una manera fácil y rápida. Cuenta con opciones en la interfaz para permitir que se intriduzcan artistas nuevos y su información, además de poder introducir fechas y lugares para conciertos.
+
+### Archivos de CSS
+
+**estilos.css** es un archivo en donde se controla el diseño de el modo oscuro de todas las páginas.
+
+**estilosCalendario.css** es un archivo específico para el archivo calendario.html, donde se personaliza, con ayuda de la librería externa, el diseño del calendario.
+
+
+### Archivos de Java Script
+
+**administracion.js** es el archivo más completo ya que, conectándose a la API, pide la lista de artistas y conciertos y los organiza en tablas. A través de ella también se crean nuevos artistas y conciertos, actualizar información y eliminar.
+
+**estadisticas.js** es un documento que, al conectarse a la API, hace gráficos.
+
+**funcionalidadCalendario.js** se conecta a la API y, después de crear el calendario en el que se estructura, inserta los eventos y los almacena.
+
+**tema.js** es un documento donde se almacena el método para poder cambiar al modo oscuro o modo claro, guardando las preferencias en LocalStorage.
+
+### Levantar el Front End
+
+Las 4 páginas con las que trabajamos fueron lanzadas por medio de Github Pages. Una vez listas en el main de nuestro repositorio, fueron desplegadas. 
+
 
 ## Backend
 
