@@ -1,4 +1,4 @@
-# Proyecto1DW
+# Proyecto 1 Desarrollo Web
 Nuestro proyecto consistió en hacer una plataforma web que asista al usuario para poder visualizar información de artistas, fechas/planificación de conciertos y estadísticas sobre los artistas . La plataforma va dirigida a un usuario que tenga interés en la administración de talentos artísticos como managers o agencias de este tipo.
 
 El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML, CSS, JavaScript y Bootstrap, conectados mediante API REST.
@@ -39,15 +39,22 @@ Proyecto1DW/
 
  **calendario.html** es una página donde se almacenan las fechas de los conciertos de todos los artistas o individualmente. A través de la API se recibe la información y se almacena dentro de el calendario que está en la página.
 
- **administracion.html**
- 
+**administracion.html** es una página que sirve para agregar artistas a la base de datos de una manera fácil y rápida. Cuenta con opciones en la interfaz para permitir que se intriduzcan artistas nuevos y su información, además de poder introducir fechas y lugares para conciertos.
 
 ### Archivos de CSS
 
+ 
 
 
 ### Archivos de Java Script
 
+**administracion.js** es el archivo más completo ya que, conectándose a la API, pide la lista de artistas y conciertos y los organiza en tablas. A través de ella también se crean nuevos artistas y conciertos, actualizar información y eliminar.
+
+**estadisticas.js** es un documento que, al conectarse a la API, hace gráficos.
+
+**funcionalidadCalendario.js** se conecta a la API y, después de crear el calendario en el que se estructura, inserta los eventos y los almacena.
+
+**tema.js** es un documento donde se almacena el método para poder cambiar al modo oscuro o modo claro, guardando las preferencias en LocalStorage.
 
 ### Levantar el Front End
 
