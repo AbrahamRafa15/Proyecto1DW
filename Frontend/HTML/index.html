@@ -4,25 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Artist Manager.io</title>
+
+    <!-- Fija la raíz del proyecto -->
+    <base href="/Proyecto1DW/"> 
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../CSS/estilos.css" />
+    <link rel="stylesheet" href="Frontend/CSS/estilos.css" />
   </head>
   <body>
     <header>
       <!-- Componente de Barra de navegación -->
       <nav class="navbar navbar-expand-lg bg-body-secundary shadow-sm bg-info-subtle">
         <div class="container">
-          <a class="navbar-brand fw-semibold" href="/Frontend/HTML/index.html">Music Manager</a>
+          <a class="navbar-brand fw-semibold" href="Frontend/HTML/index.html">Music Manager</a>
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="/Frontend/HTML/index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link " href="/Frontend/HTML/calendario.html">Fechas</a></li>
-            <li class="nav-item"><a class="nav-link " href="/Frontend/HTML/estadisticas.html">Estadísticas</a></li>
-            <li class="nav-item"><a class="nav-link " href="/Frontend/HTML/administracion.html">Administración</a></li>
+            <li class="nav-item"><a class="nav-link active" href="Frontend/HTML/index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link " href="Frontend/HTML/calendario.html">Fechas</a></li>
+            <li class="nav-item"><a class="nav-link " href="Frontend/HTML/estadisticas.html">Estadísticas</a></li>
+            <li class="nav-item"><a class="nav-link " href="Frontend/HTML/administracion.html">Administración</a></li>
             <li class="nav-item ms-3">
                 <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Cambiar Tema</button>
             </li>
@@ -61,8 +65,8 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script src="../JS/tema.js"></script>
-    <script src="../JS/index.js"></script>
+    <script src="Frontend/JS/tema.js"></script>
+    <script src="Frontend/JS/index.js"></script>
         <footer class="bg-body-secundary bg-info-subtle py-5 mt-5">
         <div class="fw-semibold text-center">
         <p cLass="h2 mb-2" >Music Manager</p>
