@@ -6,7 +6,7 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
 ## Autores
 
 <div style="display: flex; align-items: center;">
-  <img src="/Imagenes/AbrahamMC.png" alt="Abraham Martínez Cerón" width="80" style="margin-right: 10px;"/>
+  <img src="Proyecto1DW/Imagenes/AbrahamMC.png" alt="Abraham Martínez Cerón" width="80" style="margin-right: 10px;"/>
   <div>
     <strong>Abraham Martínez Cerón</strong><br/>
     Roles: Backend, administracion.html, estadisticas.html, administracion.js, estadisticas.js, requirements.txt y gitignore. Documentación de Backend.
@@ -14,7 +14,7 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
 </div>
 
 <div style="display: flex; align-items: center;">
-  <img src="/Imagenes/GiuseppeValencia.jpg" alt="Giuseppe Valencia Carrillo" width="80" style="margin-right: 10px;"/>
+  <img src="Proyecto1DW/Imagenes/GiuseppeValencia.jpg" alt="Giuseppe Valencia Carrillo" width="80" style="margin-right: 10px;"/>
   <div>
     <strong>Giuseppe Valencia Carrillo </strong><br/>
     Roles: Frontend, index.js, index.html, administracion.html, calendario.html, estadisticas.html
@@ -22,15 +22,20 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
 </div>
 
 <div style="display: flex; align-items: center;">
-  <img src="/Imagenes/diegoAda.jpg" alt="Diego Adabache" width="80" style="margin-right: 10px;"/>
+  <img src="Proyecto1DW/Imagenes/diegoAda.jpg" alt="Diego Adabache" width="80" style="margin-right: 10px;"/>
   <div>
     <strong>Diego Azahed Adabache Gutiérrez  </strong><br/>
     Roles: Frontend, tema.js, estilos.css, html en general.
   </div>
 </div>
  
- 
-Diego Martinez Tinoco  
+<div style="display: flex; align-items: center;">
+  <img src="Proyecto1DW/Imagenes/DiegoMT.png" alt="Diego Martínez" width="80" style="margin-right: 10px;"/>
+  <div>
+    <strong>Diego Martínez Tinoco</strong><br/>
+    Roles: Frontend, calendario.html. funcionalidadCalendario.js, vendor/, estilosCalendario.css
+  </div>
+</div>
 
 ## Front End 
 La estructura de los archivos es la siguiente:
