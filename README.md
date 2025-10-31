@@ -5,7 +5,13 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
 
 ## Autores
 
-Abraham Martínez Cerón  
+<div style="display: flex; align-items: center;">
+  <img src="/Imagenes/AbrahamMC.png" alt="Abraham Martínez Cerón" width="80" style="margin-right: 10px;"/>
+  <div>
+    <strong>Abraham Martínez Cerón</strong><br/>
+    Roles: Backend, administracion.html, estadisticas.html, administracion.js, estadisticas.js, requirements.txt y gitignore. Documentación de Backend.
+  </div>
+</div>
 Giuseppe Valencia Carrillo  
 Diego Azahed Adabache Gutiérrez  
 Diego Martinez Tinoco  
@@ -37,7 +43,7 @@ Proyecto1DW/
 
 **calendario.html** es una página donde se almacenan las fechas de los conciertos de todos los artistas o individualmente. A través de la API se recibe la información y se almacena dentro de el calendario que está en la página.
 
-**administracion.html** es una página que sirve para agregar artistas a la base de datos de una manera fácil y rápida. Cuenta con opciones en la interfaz para permitir que se intriduzcan artistas nuevos y su información, además de poder introducir fechas y lugares para conciertos.
+**administracion.html** es una página que sirve para agregar artistas a la base de datos de una manera fácil y rápida. Cuenta con opciones en la interfaz para permitir que se introduzcan artistas nuevos y su información, además de poder introducir fechas y lugares para conciertos.
 
 ### Archivos de CSS
 
