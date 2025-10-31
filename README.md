@@ -10,10 +10,15 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
   <div>
     <strong>Abraham Martínez Cerón</strong><br/>
     Roles: Backend, administracion.html, estadisticas.html, administracion.js, estadisticas.js, requirements.txt y gitignore. Documentación de Backend.
+    <br>
+    <img src="../Imagenes/diegoAda.jpg" alt="Diego Adabache" width="80" style="margin-right: 10px;"/>
+    <div>
+    <strong>Diego Adabache Gutiérrez</strong><br/>
+    Roles: Frontend, documentación de Frontend, tema.js, estilos.css y modificaciones generales de HTML.
+    <br>
   </div>
 </div>
-Giuseppe Valencia Carrillo  
-Diego Azahed Adabache Gutiérrez  
+Giuseppe Valencia Carrillo   
 Diego Martinez Tinoco  
 
 ## Front End 
@@ -37,7 +42,7 @@ Proyecto1DW/
 ```
 
 ### Archivos de HTML
-**Index.html** es la página principal de la página. En esta se encuentra en forma de base de datos todos los artistas que se manejan en la página. Se muestra una foto del artista, una descripción con la información destacada del artista y las próximas fechas en las que se presentará el artista. 
+**Index.html** es la página principal de la página. En esta se encuentra en forma de base de datos todos los artistas que se manejan en la página. Se muestra una foto del artista, una descripción con la información destacada del artista y las próximas fechas en las que se presentará. 
 
 **estadisticas.html** es una página en la que, a través de la API, forma gráficos en los que se refleja popularidad (en forma de reproducciones) y otro gráfico que mide asistencia a conciertos.
 
@@ -61,6 +66,8 @@ Proyecto1DW/
 **funcionalidadCalendario.js** se conecta a la API y, después de crear el calendario en el que se estructura, inserta los eventos y los almacena.
 
 **tema.js** es un documento donde se almacena el método para poder cambiar al modo oscuro o modo claro, guardando las preferencias en LocalStorage.
+
+**intro.js** es un documento que llama a la API para recolectar la información que se tiene sobre los artistas registrados, los acomoda visualmente en la página y las guarda en LocalStorage.
 
 ### Levantar el Front End
 
