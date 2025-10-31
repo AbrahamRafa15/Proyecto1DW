@@ -11,6 +11,41 @@ Diego Azahed Adabache Gutiérrez
 Diego Martinez Tinoco  
 
 
+
+## Front End 
+La estructura de los archivos es la siguiente:
+```
+Proyecto1DW/
+├── Frontend/
+│   ├── CSS/
+│   │   ├── estilos.css
+│   │   └── estilosCalendario.css
+│   ├── HTML/
+│   │   ├── administracion.html
+│   │   ├── calendario.html
+│   │   ├── estadisticas.html
+│   │   └── index.html
+│   ├── JS/
+│   │   ├── administracion.js
+│   │   ├── estadisticas.js
+│   │   ├── funcionalidadCalendario.js
+│   │   └── tema.js
+```
+
+### Archivos de HTML
+
+
+### Archivos de CSS
+
+
+
+### Archivos de Java Script
+
+
+### Levantar el Front End
+
+
+
 ## Backend
 
 La estructura de los archivos es la siguiente:
@@ -107,25 +142,5 @@ Puedes probar los endpoints fácilmente desde Swagger UI:
 O desde la terminal con `curl`:
 ```bash
 curl http://127.0.0.1:8000/health
-```
-
-### Front End 
-La estructura de los archivos es la siguiente:
-```
-Proyecto1DW/
-├── Frontend/
-│   ├── CSS/
-│   │   ├── estilos.css
-│   │   └── estilosCalendario.css
-│   ├── HTML/
-│   │   ├── administracion.html
-│   │   ├── calendario.html
-│   │   ├── estadisticas.html
-│   │   └── index.html
-│   ├── JS/
-│   │   ├── administracion.js
-│   │   ├── estadisticas.js
-│   │   ├── funcionalidadCalendario.js
-│   │   └── tema.js
 ```
 
