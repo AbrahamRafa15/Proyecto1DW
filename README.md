@@ -1,5 +1,5 @@
 # Proyecto1DW
-Plataforma web para managers de música. Permite visualizar y planificar conciertos, artistas y fechas.
+Nuestro proyecto consistió en hacer una plataforma web que asista al usuario para poder visualizar información de artistas, fechas/planificación de conciertos y estadísticas sobre los artistas . La plataforma va dirigida a un usuario que tenga interés en la administración de talentos artísticos como managers o agencias de este tipo.
 
 El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML, CSS, JavaScript y Bootstrap, conectados mediante API REST.
 
@@ -11,9 +11,51 @@ Diego Azahed Adabache Gutiérrez
 Diego Martinez Tinoco  
 
 
+
+## Front End 
+La estructura de los archivos es la siguiente:
+```
+Proyecto1DW/
+├── Frontend/
+│   ├── CSS/
+│   │   ├── estilos.css
+│   │   └── estilosCalendario.css
+│   ├── HTML/
+│   │   ├── administracion.html
+│   │   ├── calendario.html
+│   │   ├── estadisticas.html
+│   │   └── index.html
+│   ├── JS/
+│   │   ├── administracion.js
+│   │   ├── estadisticas.js
+│   │   ├── funcionalidadCalendario.js
+│   │   └── tema.js
+```
+
+### Archivos de HTML
+ **Index.html** es la página principal de la página. En esta se encuentra en forma de base de datos todos los artistas que se manejan en la página. Se muestra una foto del artista, una descripción con la información destacada del artista y las próximas fechas en las que se presentará el artista. 
+
+ **estadisticas.html** es una página en la que, a través de la API, forma gráficos en los que se refleja popularidad (en forma de reproducciones) y otro gráfico que mide asistencia a conciertos.
+
+ **calendario.html** es una página donde se almacenan las fechas de los conciertos de todos los artistas o individualmente. A través de la API se recibe la información y se almacena dentro de el calendario que está en la página.
+
+ **administracion.html** es una página que sirve para agregar artistas a la base de datos de una manera fácil y rápida. Cuenta con opciones en la interfaz para permitir que se intriduzcan artistas nuevos y su información, además de poder introducir fechas y lugares para conciertos.
+ 
+
+### Archivos de CSS
+
+
+
+### Archivos de Java Script
+
+
+### Levantar el Front End
+
+
+
 ## Backend
 
-La estructura de los archivos es la siguiente
+La estructura de los archivos es la siguiente:
 ```
 PROYECTO1DW/
 ├── Backend/
@@ -108,3 +150,4 @@ O desde la terminal con `curl`:
 ```bash
 curl http://127.0.0.1:8000/health
 ```
+
