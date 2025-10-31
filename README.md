@@ -22,7 +22,7 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
 </div>
 
 <div style="display: flex; align-items: center;">
-  <img src="/Imagenes/diegoAda.jpg" alt="Diego Adabache" width="80" style="margin-right: 10px;"/>
+  <img src="Proyecto1DW/Imagenes/diegoAda.jpg" alt="Diego Adabache" width="80" style="margin-right: 10px;"/>
   <div>
     <strong>Diego Azahed Adabache Gutiérrez  </strong><br/>
     Roles: Frontend, tema.js, estilos.css, html en general.
@@ -84,6 +84,7 @@ Proyecto1DW/
 
 Las 4 páginas con las que trabajamos fueron lanzadas por medio de Github Pages. Una vez listas en el main de nuestro repositorio, fueron desplegadas. 
 
+https://abrahamrafa15.github.io/Proyecto1DW/
 
 ## Backend
 
