@@ -4,6 +4,24 @@ const STORAGE_KEY_SELECTED = "mm_selected_artist";
 
 // === Estado global sencillo ===
 let cal;                  // instancia de Calendar.js
+
+function mountCalendarWith(options = {}) {
+    const mount = document.getElementById("calendar");
+    // Reset completo (evita duplicados)
+    mount.innerHTML = "";
+    cal = new calendarJs("calendar");
+    cal.setOptions({
+        viewToOpenOnFirstLoad: "full-month",
+        useLocalStorageForEvents: false,
+        manualEditingEnabled: false,
+        dragAndDropForEventsEnabled: false,
+        ...options, // mantiene compatibilidad
+    });
+}
+
+
+
+
 let artists = [];         // { id, name, ... }
 let concerts = [];        // { id, attendance, city, date, id_artist, ... }
 
@@ -102,12 +120,10 @@ function mapConcertsToEvents(concertList, selectedArtistId = "all") {
 
 // Actualizar/Render calendario
 function renderCalendar(selectedArtistId = "all") {
-    ensureCalendar();
     const events = mapConcertsToEvents(concerts, selectedArtistId);
-
-    // Calendar.js permite setear el dataset completo
-    cal.setOptions({ data: events });
-    }
+    // Monta desde cero el calendario con el nuevo dataset
+    mountCalendarWith({ data: events });
+}
 
     // Dropdown de artistas
     function populateArtistDropdown() {
