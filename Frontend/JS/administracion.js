@@ -8,15 +8,30 @@ const API_URL = "http://127.0.0.1:8000";
 //
 async function fetchJson(url, options = {}) {
     const res = await fetch(url, options);
-    if (!res.ok) {
-        const text = await res.text().catch(() => "");
-        const msg = text || `HTTP ${res.status}`;
-        throw new Error(`Fetch error: ${msg}`);
-    }
-    // intentar parsear JSON, si no hay cuerpo retorna null
     const contentType = res.headers.get("content-type") || "";
-    if (contentType.includes("application/json")) return res.json();
-    return null;
+    let data = null;
+    if (contentType.includes("application/json")) {
+        try {
+            data = await res.json();
+        } catch (e) {
+            data = null;
+        }
+    }
+    if (!res.ok) {
+        let mensaje = "";
+        if (data && typeof data === "object") {
+            mensaje = JSON.stringify(data);
+        } else if (typeof data === "string") {
+            mensaje = data;
+        }
+        switch (res.status) {
+            case 400: throw new Error("Bad request: " + mensaje);
+            case 404: throw new Error("No encontrado: " + mensaje);
+            case 500: throw new Error("Error interno del servidor: " + mensaje);
+            default: throw new Error(`HTTP ${res.status}: ${mensaje}`);
+        }
+    }
+    return data;
 }
 
 //
