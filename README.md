@@ -5,11 +5,13 @@ El proyecto utiliza un backend realizado con **FastAPI** y un frontend con HTML,
 
 ## Autores
 
-<div align="center">
-  <img src="/Imagenes/AbrahamMC.png" alt="Abraham Martínez Cerón" width="100"/>
+<div style="display: flex; align-items: center;">
+  <img src="/Imagenes/AbrahamMC.png" alt="Abraham Martínez Cerón" width="80" style="margin-right: 10px;"/>
+  <div>
+    <strong>Abraham Martínez Cerón</strong><br/>
+    Roles: Backend, administracion.html, estadisticas.html, administracion.js, estadisticas.js, requirements.txt y gitignore. Documentación de Backend.
+  </div>
 </div>
-**Abraham Martínez Cerón**  
-Roles: Backend, administracion.html, estadisticas.html, administracion.js, estadisticas.js, requirements.txt y gitignore. Documentación de Backend.
 Giuseppe Valencia Carrillo  
 Diego Azahed Adabache Gutiérrez  
 Diego Martinez Tinoco  
