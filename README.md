@@ -39,7 +39,7 @@ Proyecto1DW/
 
  **calendario.html** es una página donde se almacenan las fechas de los conciertos de todos los artistas o individualmente. A través de la API se recibe la información y se almacena dentro de el calendario que está en la página.
 
- **administracion.html**
+ **administracion.html** es una página que sirve para agregar artistas a la base de datos de una manera fácil y rápida. Cuenta con opciones en la interfaz para permitir que se intriduzcan artistas nuevos y su información, además de poder introducir fechas y lugares para conciertos.
  
 
 ### Archivos de CSS
